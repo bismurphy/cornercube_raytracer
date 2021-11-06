@@ -1,7 +1,7 @@
 import mpl_toolkits.mplot3d as a3d
 import matplotlib.pyplot as plt
 
-with open("cornercube.stl.txt") as stlfile:
+with open("cornercube.stl") as stlfile:
     file_lines = stlfile.readlines()
 def dotprod(vec1,vec2):
     total = 0
