@@ -14,3 +14,5 @@ difference(){
         }
     }
 }
+translate([0,5,18.66])
+sphere(1);
