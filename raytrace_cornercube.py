@@ -104,7 +104,6 @@ class Ray():
         return out_vec
 
 
-ax = a3d.Axes3D(plt.figure())
 
 #Uncomment this to run a test of over 89,000 vertical vectors and confirm they all come out vertical
 
@@ -139,12 +138,10 @@ while(keepRunning):
     if olddirection == currentRay.direction:
         keepRunning = False
     ray_bounces.append(currentRay.origin)
+    
+ax = a3d.Axes3D(plt.figure())
 ray = ax.plot3D(*list(zip(*ray_bounces)),'r')
 
-
-#reflectPoint2 = out_vec.intersect_site(currentBody.facets[21])
-
-show_tris = []
 for facet in currentBody.facets:
     verts = [v.toList() for v in facet.vertices]
     triangle = ax.plot3D(*list(zip(*verts)),'k')
